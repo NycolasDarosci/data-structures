@@ -14,12 +14,15 @@ import "fmt"
 		Is value input greater than the value? search for next
 		Is value input greater than the value? no
 		stop the search
+
+	Search -> find for the index given a value
+	Read -> find for the value given a index
 */
 
 // linear search on an ordered array
 func DoLinearSearch() {
 	arr := []int{1, 3, 7, 15, 22, 78}
-	searchValue := 7 // 2
+	searchValue := 1 // 2
 	value := linearSearch(arr, searchValue)
 	fmt.Println(*value)
 }
