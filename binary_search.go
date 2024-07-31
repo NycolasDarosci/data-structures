@@ -3,11 +3,15 @@ package main
 import "fmt"
 
 /*
-	__Binary search
+	__Binary search -> O(log n)
 
 	eliminate a cells comparing its values with the input value.
 	The algorithm do this getting the midpoint value and comparing
 	if it is greater or less or equal than the input value.
+
+	Binary search increase proportionally
+	when the array doubles increase and binary search takes plus one step to perform
+
 */
 func DoBinarySearch() {
 	arr := []int{1, 3, 7, 15, 22, 78, 99, 108}

@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 /*
-	__Linear Search
+	__Linear Search -> O(n)
+
 	check each cell one at a time — from left to right -
 	until find the value
 
 	__Linear Search on an ordered array
+
 	check each cell one at a time — from left to right -
 	until find the value, but the value is compared with the
 	values within the array.
