@@ -3,10 +3,11 @@ package main
 import "fmt"
 
 /*
-	__Linear Search -> O(n)
+	__Linear Search
 
 	check each cell one at a time — from left to right -
 	until find the value
+	O(n)
 
 	__Linear Search on an ordered array
 

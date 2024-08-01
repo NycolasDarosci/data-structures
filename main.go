@@ -1,6 +1,9 @@
 package main
 
+import s "data-structure/sortalgorithms"
+
 func main() {
-	DoLinearSearch()
-	DoBinarySearch()
+	//DoLinearSearch()
+	//DoBinarySearch()
+	s.DoBubbleSort()
 }

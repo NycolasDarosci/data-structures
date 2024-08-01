@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /*
-	__Binary search -> O(log n)
+	__Binary search
 
 	eliminate a cells comparing its values with the input value.
 	The algorithm do this getting the midpoint value and comparing
@@ -11,6 +11,7 @@ import "fmt"
 
 	Binary search increase proportionally
 	when the array doubles increase and binary search takes plus one step to perform
+	O(log n)
 
 */
 func DoBinarySearch() {
