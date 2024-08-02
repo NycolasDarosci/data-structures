@@ -1,9 +1,12 @@
 package main
 
-import s "data-structure/sortalgorithms"
+import (
+	s "data-structure/sortAlgorithms"
+)
 
 func main() {
 	//DoLinearSearch()
 	//DoBinarySearch()
-	s.DoBubbleSort()
+	//s.DoBubbleSort()
+	s.DoSelectionSort()
 }
