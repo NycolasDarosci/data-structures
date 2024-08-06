@@ -8,5 +8,6 @@ func main() {
 	//DoLinearSearch()
 	//DoBinarySearch()
 	//s.DoBubbleSort()
-	s.DoSelectionSort()
+	//s.DoSelectionSort()
+	s.DoInsertionSort()
 }
