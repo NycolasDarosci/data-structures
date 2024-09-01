@@ -27,6 +27,9 @@ Array -> list of data elements. Simpliest data structure
 - [ ] Sort algorithms
     - [x]  Bubble Sort -> O(n²)
     - [x]  Selection Sort -> O(n²)
-    - [ ]  Insertion Sort -> 
+    - [x]  Insertion Sort -> O(n²)
+    - [x]  Hash Table -> O(1)
+        Hash Table is O(N) in some cases when 
+        it has subarrays inside it (extra steps)
 - [ ]  Review the above items
 
