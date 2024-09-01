@@ -24,14 +24,11 @@ func IntersectionOfTwo(arr1 []int, arr2 []int) []int {
 
 func FirstDuplicateValues(arr []string) string {
 	strings := map[string]bool{}
-	for _, value := range arr {
-		strings[value] = true
-	}
-
-	// continue
-	for _, value := range arr {
-		if strings[value] {
+	for i, value := range arr {
+		if strings[arr[i]] {
 			return value
+		} else {
+			strings[value] = true
 		}
 	}
 	return ""

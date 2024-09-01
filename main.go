@@ -18,10 +18,12 @@ func main() {
 	isContained := h.IsSubset(arr1, arr2)
 	isContained2 := h.IsSubsetWithHashTable(arr1, arr2)
 	intersection := h.IntersectionOfTwo(arr1, arr2)
+	duplicateValue := h.FirstDuplicateValues([]string{"a", "b", "a", "h", "c", "i"})
 
 	fmt.Println(isContained)
 	fmt.Println(isContained2)
 	fmt.Println(intersection)
+	fmt.Println(duplicateValue)
 
 	//a := combineTwoCharacters([]string{"a", "b", "c", "d"})
 	//fmt.Println(a)
