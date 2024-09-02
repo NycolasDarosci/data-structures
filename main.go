@@ -20,10 +20,18 @@ func main() {
 	intersection := h.IntersectionOfTwo(arr1, arr2)
 	duplicateValue := h.FirstDuplicateValues([]string{"a", "b", "a", "h", "c", "i"})
 
+	// phrase contains all alphabet letters, except 'f'
+	phrase := "the quick brown box jumps over a lazy dog"
+	exceptLetter := h.ContainsAllAlphabetLetters(phrase)
+
+	nonDuplicated := h.FirstNonDuplicated("minimum")
+
 	fmt.Println(isContained)
 	fmt.Println(isContained2)
-	fmt.Println(intersection)
-	fmt.Println(duplicateValue)
+	fmt.Println(intersection)   // 2, 8, 5
+	fmt.Println(duplicateValue) // a
+	fmt.Println(exceptLetter)   // f
+	fmt.Println(nonDuplicated)  // n -> first character non duplicated found
 
 	//a := combineTwoCharacters([]string{"a", "b", "c", "d"})
 	//fmt.Println(a)
