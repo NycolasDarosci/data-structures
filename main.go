@@ -2,6 +2,7 @@ package main
 
 import (
 	h "data-structure/hashTables"
+	s "data-structure/stackAndQueue"
 	"fmt"
 )
 
@@ -35,4 +36,20 @@ func main() {
 
 	//a := combineTwoCharacters([]string{"a", "b", "c", "d"})
 	//fmt.Println(a)
+
+	// Stack
+	stack := s.Initialize()
+	stack.Push(1)
+	stack.Push(3)
+	stack.Push(5)
+	stack.Push(2)
+
+	stack.Print()
+
+	stack.Pop()
+
+	stack.Print()
+
+	lastElement := stack.Read()
+	fmt.Println(lastElement)
 }

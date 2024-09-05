@@ -31,5 +31,7 @@ Array -> list of data elements. Simpliest data structure
     - [x]  Hash Table -> O(1)
         Hash Table is O(N) in some cases when 
         it has subarrays inside it (extra steps)
+    - [] Stack and Queue -> both are arrays with restrictions
+    
 - [ ]  Review the above items
 
