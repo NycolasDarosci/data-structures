@@ -38,15 +38,24 @@ func main() {
 	//fmt.Println(a)
 
 	// Stack
-	stack := s.New()
-	stack.Push(1)
-	stack.Push(3)
-	stack.Push(5)
+	stack := s.NewStack()
 	stack.Push(2)
+	stack.Push(4)
+	stack.Push(6)
+	stack.Print() // 2, 4, 6
 
 	stack.Pop()
+	stack.Print() // 2, 4
 
-	stack.Print()
+	// Queue
+	q := s.NewQueue()
+	q.Enqueue(1)
+	q.Enqueue(3)
+	q.Enqueue(5)
+	q.Print() // 1, 3, 5
+
+	q.Dequeue()
+	q.Print() // 3, 5
 
 	// lastElement := stack.Read()
 	// fmt.Println(lastElement)
