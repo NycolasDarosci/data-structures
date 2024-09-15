@@ -14,37 +14,37 @@ import "fmt"
 	events need to occur in a certain order, such as airplanes waiting for takeoff
 	and patients waiting for their doctor.
 */
-type queue struct {
-	data []int
+type queue[V any] struct {
+	data []V
 }
 
-func NewQueue() queue {
-	return queue{data: make([]int, 0)}
+func NewQueue[V any]() queue[V] {
+	return queue[V]{data: make([]V, 0)}
 }
 
-func (s *queue) Enqueue(element int) {
+func (s *queue[V]) Enqueue(element V) {
 	s.data = append(s.data, element)
 }
 
-func (s *queue) Dequeue() {
+func (s *queue[V]) Dequeue() {
 	if s.IsEmpty() {
 		return
 	}
 	s.data = s.data[1:len(s.data)]
 }
 
-func (s *queue) Read() (int, error) {
+func (s *queue[V]) Read() (*V, error) {
 	if s.IsEmpty() {
-		return 0, fmt.Errorf("stack is empty")
+		return nil, fmt.Errorf("stack is empty")
 	}
-	return s.data[0], nil
+	return &s.data[0], nil
 }
 
-func (s *queue) IsEmpty() bool {
+func (s *queue[V]) IsEmpty() bool {
 	return len(s.data) == 0
 }
 
-func (s *queue) Print() {
+func (s *queue[V]) Print() {
 	for _, value := range s.data {
 		fmt.Println(value)
 	}

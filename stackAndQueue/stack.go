@@ -17,37 +17,37 @@ import "fmt"
 	stack is a base for RECURSION
 */
 
-type stack struct {
-	data []int
+type stack[V any] struct {
+	data []V
 }
 
-func NewStack() stack {
-	return stack{data: make([]int, 0)}
+func NewStack[V any]() stack[V] {
+	return stack[V]{data: make([]V, 0)}
 }
 
-func (s *stack) Push(element int) {
+func (s *stack[V]) Push(element V) {
 	s.data = append(s.data, element)
 }
 
-func (s *stack) Pop() {
+func (s *stack[V]) Pop() {
 	if s.IsEmpty() {
 		return
 	}
 	s.data = s.data[:len(s.data)-1]
 }
 
-func (s *stack) Read() (int, error) {
+func (s *stack[V]) Read() (*V, error) {
 	if s.IsEmpty() {
-		return 0, fmt.Errorf("stack is empty")
+		return nil, fmt.Errorf("stack is empty")
 	}
-	return s.data[len(s.data)-1], nil
+	return &s.data[len(s.data)-1], nil
 }
 
-func (s *stack) IsEmpty() bool {
+func (s *stack[V]) IsEmpty() bool {
 	return len(s.data) == 0
 }
 
-func (s *stack) Print() {
+func (s *stack[V]) Print() {
 	for _, value := range s.data {
 		fmt.Println(value)
 	}
@@ -55,6 +55,6 @@ func (s *stack) Print() {
 
 // stack is used on linter - opening and closing braces - algorithm
 // here is a example implementation
-func (s *stack) Linter(text string) {
+func (s *stack[V]) Linter(text string) {
 
 }

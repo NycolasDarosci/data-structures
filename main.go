@@ -38,7 +38,7 @@ func main() {
 	//fmt.Println(a)
 
 	// Stack
-	stack := s.NewStack()
+	stack := s.NewStack[int]()
 	stack.Push(2)
 	stack.Push(4)
 	stack.Push(6)
@@ -48,7 +48,7 @@ func main() {
 	stack.Print() // 2, 4
 
 	// Queue
-	q := s.NewQueue()
+	q := s.NewQueue[int]()
 	q.Enqueue(1)
 	q.Enqueue(3)
 	q.Enqueue(5)
@@ -56,6 +56,11 @@ func main() {
 
 	q.Dequeue()
 	q.Print() // 3, 5
+
+	i, err := q.Read()
+	if err == nil {
+		fmt.Println("ultimo: ", *i)
+	}
 
 	// lastElement := stack.Read()
 	// fmt.Println(lastElement)
