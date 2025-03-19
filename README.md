@@ -152,6 +152,67 @@ void show(Lue<T> &list) {
 }
 ```
 
+OPERAÇÕES LISTA
+```
+template <typename T>
+bool iguais(LUE<T> list1, LUE<T> list2) {
+    
+    if ( comprimento(list1) != comprimento(list2)) {
+        return false;
+    }
+    
+    No<T> *aux = list1.comeco;
+    
+    while ( aux != NULL ) {
+        if ( localizar(list2, aux->info) != NULL ) return true;
+        aux = aux->elo;
+    }
+    return false;
+}
+
+template <typename T>
+LUE<T> *copiar(LUE<T> list1, LUE<T> &list2) {
+    No<T> *aux = list1.comeco;
+    
+    inicializar(list2);
+    
+    while ( aux != NULL) {
+        inserirFinal(list2, aux->info);
+        aux = aux->elo;
+    }
+    return &list2;
+}
+
+template <typename T>
+LUE<T> diferenca(LUE<T> lista1, LUE<T> lista2) {
+    LUE<T> resultado;
+    No <T> *aux = lista1.comeco;
+    
+    inicializar(resultado);
+    while ( aux != NULL ) {
+        if (localizar(lista2, aux->info) == NULL) {
+            inserir(resultado, aux->info);
+        }
+        aux = aux->elo;
+    }
+    return resultado;
+}
+
+template <typename T>
+LUE<T> comuns(LUE<T> lista1, LUE<T> lista2) {
+    LUE<T> resultado;
+    No <T> *aux = lista1.comeco;
+    
+    inicializar(resultado);
+    while ( aux != NULL ) {
+        if (localizar(lista2, aux->info) != NULL) {
+            inserir(resultado, aux->info);
+        }
+        aux = aux->elo;
+    }
+    return resultado;
+}
+```
 Fazer metodo de inserir para:
 
 1 - lista vazia;
